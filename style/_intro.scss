@@ -1,0 +1,90 @@
+.main-head {
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  flex-wrap: wrap;
+  font-family: "Monda", sans-serif;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 2 1 10rem;
+    h1 {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Monda", sans-serif;
+  color: $blue-text;
+  @include flex(space-between, center, row);
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+  }
+  p {
+    padding-top: 2rem;
+  }
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.intro-text,
+.intro-images {
+  flex: 1 1 40rem;
+}
+
+.intro-social {
+  margin-top: 4rem;
+  a {
+    margin: 2rem;
+  }
+}
+
+.active {
+  background: #212f3c;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+#apple {
+  animation: apple 1.5s ease infinite alternate;
+}
+
+#flower {
+  animation: flower 1s ease infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes apple {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes flower {
+  from {
+    transform: rotateZ(-30deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}

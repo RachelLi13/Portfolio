@@ -1,0 +1,27 @@
+.projects {
+  font-family: "Monda", sans-serif;
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  color: $blue-text;
+  @include flex(space-between, center, row);
+  text-align: center;
+  flex-wrap: wrap;
+  h2 {
+    margin: 5rem;
+  }
+}
+
+.weather,
+.fitness {
+  flex: 1 1 40rem;
+}
+
+.weather,
+.fitness {
+  img {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
